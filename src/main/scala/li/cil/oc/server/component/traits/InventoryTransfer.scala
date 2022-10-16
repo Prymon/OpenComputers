@@ -8,6 +8,7 @@ import li.cil.oc.server.component._
 import li.cil.oc.util.ExtendedArguments._
 import li.cil.oc.util.FluidUtils
 import li.cil.oc.util.InventoryUtils
+import net.minecraftforge.common.util.ForgeDirection
 
 trait InventoryTransfer extends traits.WorldAware with traits.SideRestricted {
   // Return None on success, else Some("failure reason")
@@ -15,7 +16,7 @@ trait InventoryTransfer extends traits.WorldAware with traits.SideRestricted {
 
   @Callback(doc = """function(sourceSide:number, sinkSide:number[, count:number[, sourceSlot:number[, sinkSlot:number]]]):number -- Transfer some items between two inventories.""")
   def transferItem(context: Context, args: Arguments): Array[AnyRef] = {
-    val sourceSide = checkSideForAction(args, 0)
+    val sourceSide: ForgeDirection = checkSideForAction(args, 0)
     val sourcePos = position.offset(sourceSide)
     val sinkSide = checkSideForAction(args, 1)
     val sinkPos = position.offset(sinkSide)

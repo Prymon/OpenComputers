@@ -13,7 +13,7 @@ dependencies {
     compileOnly("com.github.GTNewHorizons:EnderStorage:1.4.11:dev") {
         transitive = false
     }
-    compileOnly("com.github.GTNewHorizons:GT5-Unofficial:5.09.40.32:dev") {
+    compileOnly("com.github.Prymon:GT5-Unofficial:v1.0.0-alpha") {
         transitive = false
     }
     compile("com.github.GTNewHorizons:ForestryMC:4.4.5:dev") {
@@ -113,6 +113,7 @@ dependencies {
     }
     compileOnly(deobf("https://immibis.com/mcmoddl/files/redlogic-59.1.13.jar"))
     compileOnly files("dependencies/ic2classic-api.zip") //curseforge one does NOT work ...
+//    compileOnly files("dependencies/gregtech-1.7.10-dev-test-1.0-4-ga9b8f93.dirty-dev.jar") // add by prymon personal use
     compileOnly(deobf("https://github.com/purpleposeidon/fz_archive/raw/master/old/Factorization-1.7.10-0.8.108.jar"))
     compileOnly("api:coloredlightscore:1")
     compileOnly(deobf("http://immibis.com/mcmoddl/files/immibis-microblocks-59.1.2.jar"))
